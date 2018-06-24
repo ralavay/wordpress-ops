@@ -1,0 +1,9 @@
+.git*
+
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+.env
+docker-db-data
+

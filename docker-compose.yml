@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  wordpress:
+    build:
+      context: .
+    restart: always
+    ports:
+      - 8000:80
+    depends_on:
+      - mysql
+    env_file:
+      .env
+
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - ./docker-db-data:/var/lib/mysql
