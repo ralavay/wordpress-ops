@@ -55,7 +55,7 @@ We will use `AWS` as the infrastructure provider here. We recommend to use [Clou
 
 I think most of the Wordpress sites are running on a single server on DigitalOcean, AWS, GCP, etc.
 
-The problem comes when you have more than 1 instances of Wordpress e.g user sessions, uploaded data, etc. Most of these are easily handled by plugin. Here are some plugins that we recommend
+The problem comes when you have more than 1 server e.g user sessions, uploaded data, etc. Most of these are easily handled by plugin. Here are some plugins that we recommend
 
 - [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/) uploads images to S3 instead of storing them in server.
 - [WP Session Manager](https://wordpress.org/plugins/wp-session-manager/) supports to move PHP session to database.
@@ -72,6 +72,9 @@ Requirements
 This is all what you need to launch this repo in your local
 
 ```
+# Update ENV variables if needed
+cp .env.sample .env
+
 # Start MySQL and Wordpress
 # Then you can access Wordpress from your browser http://localhost:8000
 docker-compose up
