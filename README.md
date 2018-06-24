@@ -43,6 +43,42 @@ Note that ENV has its own problem. It is not really fix the issue of plaintext p
 
 Depends on your complexity of your project then you can have a different Git flow. Base on that flow you can decide how to release to staging up to production.
 
+## Example
+
+Imagine about a simple Wordpress site that editor publish content, upload images, etc. Readers will comment to the article using [Disqus](https://disqus.com/) so basically 99% of the traffic will be static.
+
+We will use `AWS` as the infrastructure provider here. We recommend to use [Cloudflare](https://www.cloudflare.com/) as DNS manager and CDN. Cloudflare protects your site from many kind of attacks and it will save you a fortune when you have to serve millions of clients with TBs of bandwidth.
+
+![Wordpress-Sample-Site](./__docs__/images/wordpress-arch.svg)
+
+## Setup
+
+I think most of the Wordpress sites are running on a single server on DigitalOcean, AWS, GCP, etc.
+
+The problem comes when you have more than 1 instances of Wordpress e.g user sessions, uploaded data, etc. Most of these are easily handled by plugin. Here are some plugins that we recommend
+
+- [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/) uploads images to S3 instead of storing them in server.
+- [WP Session Manager](https://wordpress.org/plugins/wp-session-manager/) supports to move PHP session to database.
+
+For fun we will run staging and production on EC2 Ubuntu 18.04 and in development we provide a docker config with similar config.
+
+## Development environment
+
+Requirements 
+
+- [Docker](https://docs.docker.com/install/) version >= v18.x
+- [Docker Compose](https://docs.docker.com/compose/install/) version >= v1.3
+
+This is all what you need to launch this repo in your local
+
+```
+# Start MySQL and Wordpress
+# Then you can access Wordpress from your browser http://localhost:8000
+docker-compose up
+
+# Turn off the resources
+docker-compose down
+```
 
 
 
