@@ -15,8 +15,7 @@ There are many services that you can use to monitor this
 
 - [NewRelic](https://newrelic.com/)
 - [Pingdom](https://pingdom.com/)
-
-...
+- ...
 
 ## Performance Monitoring
 
@@ -39,8 +38,7 @@ Better to use log management service like
 
 - [Scalyr](https://www.scalyr.com/)
 - [Logentries](https://logentries.com/)
-
-...
+- ...
 
 They both provide agent that you can run on the server to collect and send the log to a central service. You can view and query the log from the web interface or using API to query.
 
@@ -50,8 +48,7 @@ You should capture code exceptions and send to service like
 
 - [Rollbar](https://rollbar.com/)
 - [Sentry](https://sentry.io/)
-
-...
+- ...
 
 Depends on the exception you can decide to ignore or notify you or not.
 
@@ -64,5 +61,4 @@ Continously benchmark the website to find out bottleneck and improve it. There a
 - [GTmetrix](https://gtmetrix.com/)
 - [Webpagetest](https://www.webpagetest.org/)
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-
-...
+- ...
