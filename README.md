@@ -88,6 +88,7 @@ docker-compose down
 - [Monitoring](./__docs__/Monitoring.md) - know your app.
 - Backup
 - Security
+- [AWS EC2 Note](./__docs__/AWS-EC2-Note.md)
 
 # TODO
 
