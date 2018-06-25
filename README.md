@@ -72,6 +72,9 @@ Requirements
 All what you need to launch this repo in your local
 
 ```
+# Update ENV variables
+cp .env.sample .env
+
 # Start MySQL and Wordpress
 # Then you can access Wordpress from your browser http://localhost:8000
 docker-compose up
@@ -86,7 +89,12 @@ docker-compose down
 - Backup
 - Security
 
+# TODO
 
+- [ ] CI config in CircleCI or Travis.
+- [ ] Ansible code to deploy on EC2.
+- [ ] Terraform code to launch the whole infras set.
+- [ ] Improve the Docker config and deploy to AWS ECS.
 
 
 
